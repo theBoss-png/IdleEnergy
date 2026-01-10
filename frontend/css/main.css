@@ -188,6 +188,32 @@ body {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     min-height: 400px;
 }
+.shop-item-icon {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 5px;
+}
+
+.shop-item-icon img {
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto;
+}
+
+.fallback-icon {
+    font-size: 32px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    line-height: 48px;
+}
+
 
 /* Energy Tab */
 .energy-content {

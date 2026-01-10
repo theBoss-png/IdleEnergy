@@ -5,22 +5,22 @@ let gameState = {
     workers: 2,
     coal: 0,
     shopItems: [
-        { name: "Coal Mine", basePrice: 10000, price: 500, energyPerSecond: 0, workerCost: 1, owned: 0, coalPerSecond: 1, icon: "⛏️" },
-        { name: "Human Power", basePrice: 100, price: 100, energyPerSecond: 1, workerCost: 1, owned: 0, icon: "💪" },
-        { name: "Wasserrad", basePrice: 1000, price: 500, energyPerSecond: 50, workerCost: 2, owned: 0, icon: "🎡" },
-        { name: "Windmühle", basePrice: 5000, price: 1000, energyPerSecond: 50, workerCost: 1, owned: 0, icon: "🌾" },
-        { name: "Solar Panel", basePrice: 100, price: 100, energyPerSecond: 10, workerCost: 1, owned: 0, icon: "☀️" },
-        { name: "Wind Turbine", basePrice: 500, price: 500, energyPerSecond: 50, workerCost: 3, owned: 0, icon: "💨" },
-        { name: "Wave Energy", basePrice: 1000, price: 1000, energyPerSecond: 100, workerCost: 5, owned: 0, icon: "🌊" },
-        { name: "Biogas", basePrice: 2000, price: 2000, energyPerSecond: 200, workerCost: 5, owned: 0, icon: "🌱" },
-        { name: "Wasserwerk", basePrice: 2000, price: 2000, energyPerSecond: 200, workerCost: 5, owned: 0, icon: "💧" },
-        { name: "Blitze farmen", basePrice: 30000, price: 30000, energyPerSecond: 3000, workerCost: 2, owned: 0, icon: "⚡" },
-        { name: "Pyramide Energy", basePrice: 200000, price: 200000, energyPerSecond: 20000, workerCost: 5, owned: 0, icon: "🔺" },
-        { name: "AKW", basePrice: 10000, price: 500, energyPerSecond: 1000, workerCost: 20, owned: 0, icon: "☢️" },
-        { name: "Fusions Reaktor", basePrice: 10000, price: 10000, energyPerSecond: 10000, workerCost: 25, owned: 0, icon: "🔬" },
-        { name: "Earth Rotation", basePrice: 10000, price: 10000, energyPerSecond: 10000, workerCost: 50, owned: 0, icon: "🌍" },
-        { name: "Black Hole", basePrice: 100000, price: 5000000, energyPerSecond: 500000, workerCost: 100, owned: 0, icon: "🕳️" },
-        { name: "Golden Hole", basePrice: 30000000, price: 50000000, energyPerSecond: 500000000, workerCost: 1000, owned: 0, icon: "✨" }
+        { name: "Coal Mine", basePrice: 10000, price: 500, energyPerSecond: 0, workerCost: 1, owned: 0, coalPerSecond: 1, image: "assets/pictures/coalfarm.png" },
+        { name: "Human Power", basePrice: 100, price: 100, energyPerSecond: 1, workerCost: 1, owned: 0, image: "assets/pictures/Menschenkraft.png"},
+        { name: "Wasserrad", basePrice: 1000, price: 500, energyPerSecond: 50, workerCost: 2, owned: 0, image: "assets/pictures/wasserrad.png" },
+        { name: "Windmühle", basePrice: 5000, price: 1000, energyPerSecond: 50, workerCost: 1, owned: 0, image: "assets/pictures/windmühle.png" },
+        { name: "Solar Panel", basePrice: 100, price: 100, energyPerSecond: 10, workerCost: 1, owned: 0, icmage: "assets/pictures/Solar.png"},
+        { name: "Wind Turbine", basePrice: 500, price: 500, energyPerSecond: 50, workerCost: 3, owned: 0, image: "assets/pictures/wind.png"},
+        { name: "Wave Energy", basePrice: 1000, price: 1000, energyPerSecond: 100, workerCost: 5, owned: 0, image: "assets/pictures/wave.png"},
+        { name: "Biogas", basePrice: 2000, price: 2000, energyPerSecond: 200, workerCost: 5, owned: 0, image: "assets/pictures/BIOGAS.png"},
+        { name: "Wasserwerk", basePrice: 2000, price: 2000, energyPerSecond: 200, workerCost: 5, owned: 0, image: "assets/pictures/Wasserkraft.png"},
+        { name: "Lightning-farm", basePrice: 30000, price: 30000, energyPerSecond: 3000, workerCost: 2, owned: 0, image: "assets/pictures/blitz.png"},
+        { name: "AKW", basePrice: 10000, price: 500, energyPerSecond: 1000, workerCost: 20, owned: 0, icmage: "assets/pictures/AKW.png"},
+        { name: "Fusions Reaktor", basePrice: 10000, price: 10000, energyPerSecond: 10000, workerCost: 25, owned: 0, image: "assets/pictures/fusion.png"},
+        { name: "Pyramide Energy", basePrice: 200000, price: 200000, energyPerSecond: 20000, workerCost: 5, owned: 0, image: "assets/pictures/pyramide.png"},
+        { name: "Earth Rotation", basePrice: 10000, price: 10000, energyPerSecond: 10000, workerCost: 50, owned: 0, image: "assets/pictures/earth.png"},
+        { name: "Black Hole", basePrice: 100000, price: 5000000, energyPerSecond: 500000, workerCost: 100, owned: 0, icmage: "assets/pictures/blackhole.png"},
+        { name: "Golden Hole", basePrice: 30000000, price: 50000000, energyPerSecond: 500000000, workerCost: 1000, owned: 0, image: "assets/pictures/blackhole2.png"}
     ]
 };
 
@@ -66,28 +66,71 @@ function renderShop() {
             ? `Base: 🪨${item.coalPerSecond}/sec`
             : `Base: ⚡${item.energyPerSecond}/sec`;
 
-        itemDiv.innerHTML = `
-            <div class="shop-item-content">
-                <div class="shop-item-info">
-                    <div class="shop-item-icon">${item.icon}</div>
-                    <div class="shop-item-details">
-                        <div class="shop-item-name">${item.name}</div>
-                        <div class="shop-item-stats">
-                            ${productionText} • Owned: <span class="owned">${item.owned}</span>
-                        </div>
-                        <div class="shop-item-base">${baseText}</div>
-                    </div>
-                </div>
-                <button class="buy-button" onclick="buyItem(${index})" ${!canAfford ? 'disabled' : ''}>
-                    <div class="buy-button-price">💰 ${formatNumber(item.price)}</div>
-                    <div class="buy-button-workers">🧑‍🏭 ${item.workerCost}</div>
-                </button>
-            </div>
+        // Shop item content
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'shop-item-content';
+
+        // Icon
+        const iconDiv = document.createElement('div');
+        iconDiv.className = 'shop-item-icon';
+
+        const img = document.createElement('img');
+        img.src = item.image;
+        img.alt = item.name;
+        img.width = 48;
+        img.height = 48;
+
+        // Fallback Emoji
+        const fallback = document.createElement('span');
+        fallback.className = 'fallback-icon';
+        fallback.textContent = item.icon;
+        fallback.style.display = 'none'; // STANDARD: versteckt
+
+        // Bild laden
+        img.onload = () => {
+            fallback.style.display = 'none'; // falls Bild da → Emoji bleibt versteckt
+        }
+        img.onerror = () => {
+            img.style.display = 'none';     // Bild weg
+            fallback.style.display = 'inline-block'; // Emoji sichtbar
+        }
+
+        iconDiv.appendChild(img);
+        iconDiv.appendChild(fallback);
+
+        // Details
+        const detailsDiv = document.createElement('div');
+        detailsDiv.className = 'shop-item-details';
+        detailsDiv.innerHTML = `
+            <div class="shop-item-name">${item.name}</div>
+            <div class="shop-item-stats">${productionText} • Owned: <span class="owned">${item.owned}</span></div>
+            <div class="shop-item-base">${baseText}</div>
         `;
 
+        // Buy Button
+        const buyBtn = document.createElement('button');
+        buyBtn.className = 'buy-button';
+        buyBtn.innerHTML = `
+            <div class="buy-button-price">💰 ${formatNumber(item.price)}</div>
+            <div class="buy-button-workers">🧑‍🏭 ${item.workerCost}</div>
+        `;
+        buyBtn.disabled = !canAfford;
+        buyBtn.addEventListener('click', () => buyItem(index));
+
+        // Zusammenfügen
+        const infoDiv = document.createElement('div');
+        infoDiv.className = 'shop-item-info';
+        infoDiv.appendChild(iconDiv);
+        infoDiv.appendChild(detailsDiv);
+
+        contentDiv.appendChild(infoDiv);
+        contentDiv.appendChild(buyBtn);
+
+        itemDiv.appendChild(contentDiv);
         shopContainer.appendChild(itemDiv);
     });
 }
+
 
 // Game Logic
 function buyItem(index) {
