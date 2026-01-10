@@ -1,0 +1,376 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e293b 0%, #581c87 50%, #1e293b 100%);
+    color: white;
+    padding: 1.5rem;
+    overflow-x: hidden;
+}
+
+/* Animated background particles */
+.bg-particles {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    mix-blend-mode: multiply;
+    filter: blur(60px);
+    opacity: 0.2;
+    animation: pulse 4s ease-in-out infinite;
+}
+
+.particle-1 {
+    top: 25%;
+    left: 25%;
+    width: 256px;
+    height: 256px;
+    background: #a855f7;
+}
+
+.particle-2 {
+    top: 33%;
+    right: 25%;
+    width: 288px;
+    height: 288px;
+    background: #3b82f6;
+    animation-delay: 1s;
+}
+
+.particle-3 {
+    bottom: 25%;
+    left: 33%;
+    width: 320px;
+    height: 320px;
+    background: #ec4899;
+    animation-delay: 2s;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 0.3; transform: scale(1.1); }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 3.75rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #fbbf24, #a855f7, #3b82f6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.subtitle {
+    color: #d8b4fe;
+    font-size: 1.125rem;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(16px);
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s;
+}
+
+.stat-card:hover {
+    transform: scale(1.05);
+}
+
+.stat-card.energy {
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.2), rgba(202, 138, 4, 0.2));
+    border: 1px solid rgba(234, 179, 8, 0.3);
+}
+
+.stat-card.gold {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(217, 119, 6, 0.2));
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.stat-card.workers {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(37, 99, 235, 0.2));
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.stat-card.coal {
+    background: linear-gradient(135deg, rgba(107, 114, 128, 0.2), rgba(75, 85, 99, 0.2));
+    border: 1px solid rgba(107, 114, 128, 0.3);
+}
+
+.stat-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.stat-icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    opacity: 0.8;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: bold;
+    font-size: 1.125rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.tab-button.active.energy-tab {
+    background: linear-gradient(to right, #eab308, #f97316);
+    box-shadow: 0 10px 30px rgba(234, 179, 8, 0.5);
+}
+
+.tab-button.active.market-tab {
+    background: linear-gradient(to right, #a855f7, #ec4899);
+    box-shadow: 0 10px 30px rgba(168, 85, 247, 0.5);
+}
+
+.tab-button:not(.active) {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+}
+
+.tab-button:not(.active):hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Content Area */
+.content-area {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    min-height: 400px;
+}
+
+/* Energy Tab */
+.energy-content {
+    text-align: center;
+}
+
+.production-rate {
+    margin-bottom: 2rem;
+}
+
+.production-icon {
+    width: 3rem;
+    height: 3rem;
+    color: #4ade80;
+    margin-bottom: 1rem;
+}
+
+.production-value {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: #4ade80;
+    margin-bottom: 0.5rem;
+}
+
+.production-label {
+    color: #d8b4fe;
+}
+
+.sell-button {
+    background: linear-gradient(to right, #10b981, #059669);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+    transition: all 0.3s;
+    color: white;
+}
+
+.sell-button:hover:not(:disabled) {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(16, 185, 129, 0.5);
+}
+
+.sell-button:disabled {
+    background: linear-gradient(to right, #4b5563, #374151);
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Market Tab */
+.shop-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+.shop-items::-webkit-scrollbar {
+    width: 8px;
+}
+
+.shop-items::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.shop-items::-webkit-scrollbar-thumb {
+    background: rgba(168, 85, 247, 0.5);
+    border-radius: 4px;
+}
+
+.shop-item {
+    background: linear-gradient(to right, rgba(30, 41, 59, 0.8), rgba(51, 65, 85, 0.8));
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(100, 116, 139, 0.5);
+    border-radius: 1rem;
+    padding: 1rem;
+    transition: all 0.3s;
+}
+
+.shop-item:hover {
+    border-color: rgba(168, 85, 247, 0.5);
+    box-shadow: 0 10px 30px rgba(168, 85, 247, 0.2);
+}
+
+.shop-item-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.shop-item-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.shop-item-icon {
+    font-size: 3rem;
+}
+
+.shop-item-details {
+    flex: 1;
+}
+
+.shop-item-name {
+    font-weight: bold;
+    font-size: 1.125rem;
+    color: #d8b4fe;
+}
+
+.shop-item-stats {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    margin-top: 0.25rem;
+}
+
+.shop-item-base {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-top: 0.25rem;
+}
+
+.owned {
+    color: #fbbf24;
+}
+
+.buy-button {
+    background: linear-gradient(to right, #9333ea, #ec4899);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(147, 51, 234, 0.3);
+    transition: all 0.3s;
+    color: white;
+    white-space: nowrap;
+}
+
+.buy-button:hover:not(:disabled) {
+    transform: scale(1.05);
+}
+
+.buy-button:disabled {
+    background: linear-gradient(to right, #374151, #1f2937);
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.buy-button-price {
+    font-size: 0.875rem;
+}
+
+.buy-button-workers {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+.hidden {
+    display: none;
+}
