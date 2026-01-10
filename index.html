@@ -82,7 +82,13 @@
   </div>
 
   <div class="content-area">
-    <div id="energy-content" class="energy-content">
+    <!-- Market Content: jetzt sichtbar -->
+    <div id="market-content" class="market-content">
+      <div class="shop-items" id="shop-items"></div>
+    </div>
+
+    <!-- Energy Content: jetzt versteckt -->
+    <div id="energy-content" class="energy-content hidden">
       <div class="production-rate">
         <svg class="production-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin: 0 auto;">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
@@ -95,11 +101,8 @@
         💰 Sell 100 Energy → 1000 Gold
       </button>
     </div>
-
-    <div id="market-content" class="hidden">
-      <div class="shop-items" id="shop-items"></div>
-    </div>
   </div>
+
 </div>
 
 <script src="frontend/js/main.js"></script>
