@@ -7,8 +7,8 @@ let gameState = {
     shopItems: [
         { name: "Coal Mine", basePrice: 10000, price: 500, energyPerSecond: 0, workerCost: 1, owned: 0, coalPerSecond: 1, icon: "⛏️" },
         { name: "Human Power", basePrice: 100, price: 100, energyPerSecond: 1, workerCost: 1, owned: 0, icon: "💪" },
-        { name: "Wasserrad", basePrice: 500, price: 500, energyPerSecond: 50, workerCost: 2, owned: 0, icon: "🎡" },
-        { name: "Windmühle", basePrice: 1000, price: 1000, energyPerSecond: 50, workerCost: 1, owned: 0, icon: "🌾" },
+        { name: "Wasserrad", basePrice: 1000, price: 500, energyPerSecond: 50, workerCost: 2, owned: 0, icon: "🎡" },
+        { name: "Windmühle", basePrice: 5000, price: 1000, energyPerSecond: 50, workerCost: 1, owned: 0, icon: "🌾" },
         { name: "Solar Panel", basePrice: 100, price: 100, energyPerSecond: 10, workerCost: 1, owned: 0, icon: "☀️" },
         { name: "Wind Turbine", basePrice: 500, price: 500, energyPerSecond: 50, workerCost: 3, owned: 0, icon: "💨" },
         { name: "Wave Energy", basePrice: 1000, price: 1000, energyPerSecond: 100, workerCost: 5, owned: 0, icon: "🌊" },
