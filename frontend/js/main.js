@@ -8,7 +8,7 @@ let gameState = {
         { name: "Coal Mine", basePrice: 10000, price: 500, energyPerSecond: 0, workerCost: 1, owned: 0, coalPerSecond: 1, image: "assets/pictures/coalfarm.png" },
         { name: "Human Power", basePrice: 100, price: 100, energyPerSecond: 1, workerCost: 1, owned: 0, image: "assets/pictures/Menschenkraft.png"},
         { name: "Wasserrad", basePrice: 1000, price: 500, energyPerSecond: 50, workerCost: 2, owned: 0, image: "assets/pictures/wasserrad.png" },
-        { name: "Windmühle", basePrice: 5000, price: 1000, energyPerSecond: 50, workerCost: 1, owned: 0, image: "assets/pictures/windmühle.png" },
+        { name: "Windmühle", basePrice: 5000, price: 1000, energyPerSecond: 50, workerCost: 1, owned: 0, image: "assets/pictures/windmuehle.png" },
         { name: "Solar Panel", basePrice: 100, price: 100, energyPerSecond: 10, workerCost: 1, owned: 0, image: "assets/pictures/Solar.png"},
         { name: "Wind Turbine", basePrice: 500, price: 500, energyPerSecond: 50, workerCost: 3, owned: 0, image: "assets/pictures/wind.png"},
         { name: "Wave Energy", basePrice: 1000, price: 1000, energyPerSecond: 100, workerCost: 5, owned: 0, image: "assets/pictures/wave.png"},
@@ -19,8 +19,8 @@ let gameState = {
         { name: "Fusions Reaktor", basePrice: 10000, price: 10000, energyPerSecond: 10000, workerCost: 25, owned: 0, image: "assets/pictures/fusion.png"},
         { name: "Pyramide Energy", basePrice: 200000, price: 200000, energyPerSecond: 20000, workerCost: 5, owned: 0, image: "assets/pictures/pyramide.png"},
         { name: "Earth Rotation", basePrice: 10000, price: 10000, energyPerSecond: 10000, workerCost: 50, owned: 0, image: "assets/pictures/earth.png"},
-        { name: "Black Hole", basePrice: 100000, price: 5000000, energyPerSecond: 500000, workerCost: 100, owned: 0, image: "assets/pictures/blackhole.png"},
-        { name: "Golden Hole", basePrice: 30000000, price: 50000000, energyPerSecond: 500000000, workerCost: 1000, owned: 0, image: "assets/pictures/blackhole2.png"}
+        { name: "Black Hole", basePrice: 100000, price: 5000000, energyPerSecond: 500000, workerCost: 100, owned: 0, image: "assets/pictures/blackhole2.png"},
+        { name: "Golden Hole", basePrice: 30000000, price: 50000000, energyPerSecond: 500000000, workerCost: 1000, owned: 0, image: "assets/pictures/blackhole.png"}
     ]
 };
 
