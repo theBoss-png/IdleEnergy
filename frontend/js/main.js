@@ -5,7 +5,6 @@ let gameState = {
     workers: 2,
     coal: 0,
     shopItems: [
-        { name: "Coal Mine", basePrice: 10000, price: 500, energyPerSecond: 0, workerCost: 1, owned: 0, coalPerSecond: 1, image: "assets/pictures/coalfarm.png" },
         { name: "Human Power", basePrice: 100, price: 100, energyPerSecond: 1, workerCost: 1, owned: 0, image: "assets/pictures/Menschenkraft.png"},
         { name: "Wasserrad", basePrice: 1000, price: 500, energyPerSecond: 50, workerCost: 2, owned: 0, image: "assets/pictures/wasserrad.png" },
         { name: "Windmühle", basePrice: 5000, price: 1000, energyPerSecond: 50, workerCost: 1, owned: 0, image: "assets/pictures/windmuehle.png" },
