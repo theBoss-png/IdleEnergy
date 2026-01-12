@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IdleEnergy - Bank</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <style>
+    .bank-action-btn {
+      background: rgba(74, 158, 255, 0.2);
+      border: 1px solid #4a9eff;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 10px;
+      width: 100%;
+    }
+    .bank-action-btn:hover { background: rgba(74, 158, 255, 0.4); }
+    .input-amount {
+      background: rgba(0,0,0,0.4);
+      border: 1px solid rgba(100,150,255,0.3);
+      color: white;
+      padding: 5px;
+      width: 100%;
+      margin-bottom: 5px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="sidebar">
+    <div class="logo"><h2>IdleEnergy</h2></div>
+    <div class="nav-item" onclick="window.location.href='../../index.html'">Home</div>
+    <div class="nav-group">
+      <div class="nav-group-title">Money</div>
+      <div class="nav-item active" onclick="window.location.href='bank.html'">Bank</div>
+      <div class="nav-item">Taxes</div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="header">
+      <div class="company-name">Finanzzentrum</div>
+      <div class="header-stats">
+        <div class="stat-item">
+          <span class="stat-label">Gesamtvermögen</span>
+          <span class="stat-value money" id="stat-value-money">0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="dashboard-grid">
+      <div class="dashboard-card">
+        <div class="card-header">
+          <div class="card-icon money">💳</div>
+          <div class="card-title">Girokonto</div>
+        </div>
+        <div class="card-content">
+          <div class="info-row">
+            <span class="info-label">Guthaben</span>
+            <span class="info-value" id="bank-balance">0 $</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Zinssatz</span>
+            <span class="info-value">0.0%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-card">
+        <div class="card-header">
+          <div class="card-icon company">🏦</div>
+          <div class="card-title">Sparkonto</div>
+        </div>
+        <div class="card-content">
+          <div class="info-row">
+            <span class="info-label">Guthaben</span>
+            <span class="info-value positive" id="savings-balance">0 $</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Zinssatz</span>
+            <span class="info-value positive" id="savings-zins">1.5%</span>
+          </div>
+          <input type="number" id="transfer-amount" class="input-amount" placeholder="Betrag...">
+          <button class="bank-action-btn" id="btn-deposit">Einzahlen</button>
+          <button class="bank-action-btn" id="btn-withdraw">Auszahlen</button>
+        </div>
+      </div>
+
+      <div class="dashboard-card">
+        <div class="card-header">
+          <div class="card-icon social">💸</div>
+          <div class="card-title">Kredite</div>
+        </div>
+        <div class="card-content">
+          <div class="info-row">
+            <span class="info-label">Verfügbarer Kredit</span>
+            <span class="info-value">50.000 $</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Zinsen p.M.</span>
+            <span class="info-value negative">5.0%</span>
+          </div>
+          <button class="bank-action-btn" style="border-color: #f87171;">Kredit aufnehmen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="module" src="../js/bank.js"></script>
+</body>
+</html>

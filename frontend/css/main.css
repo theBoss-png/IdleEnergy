@@ -242,3 +242,77 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(74, 158, 255, 0.7);
 }
+
+/* Bank-spezifische Erweiterungen */
+
+/* Eingabefelder für Beträge */
+.input-amount {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(100, 150, 255, 0.3);
+    color: #fff;
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-amount:focus {
+    border-color: #4a9eff;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Bank-Aktions-Buttons */
+.bank-action-btn {
+    background: rgba(74, 158, 255, 0.15);
+    border: 1px solid rgba(74, 158, 255, 0.5);
+    color: #4a9eff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.bank-action-btn:hover {
+    background: rgba(74, 158, 255, 0.3);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 158, 255, 0.2);
+}
+
+/* Spezielle Farbe für Kredit-Buttons (Gefahr/Schulden) */
+.bank-action-btn.loan-btn {
+    border-color: rgba(248, 113, 113, 0.5);
+    color: #f87171;
+}
+
+.bank-action-btn.loan-btn:hover {
+    background: rgba(248, 113, 113, 0.2);
+    border-color: #f87171;
+}
+
+/* Flexbox für Button-Reihen */
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.button-group .bank-action-btn {
+    flex: 1;
+}
+
+/* Hilfsklasse für Abstände innerhalb der Karten */
+.card-footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(100, 150, 255, 0.1);
+}
