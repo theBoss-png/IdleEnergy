@@ -25,8 +25,6 @@ function createAdObject(name, price, views) {
     };
 }
 
-
-
 // 2. State aus dem LocalStorage laden ODER Standard-Werte nutzen
 // Wir nutzen JSON.parse, weil LocalStorage nur Text speichern kann
 const savedData = localStorage.getItem("myGameData");
